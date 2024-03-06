@@ -55,11 +55,29 @@ color: var(--verde);
     border-top: none;
 
 }
+.botao:first-child{
+    border-radius: 40px 40px 0 0;
+}
 
+.botao{
+    display: block;
+}
 
 @media screen and (min-width: 768px) {
-    .botoes {
-        display: flex;}
+
+
+    .botoes { 
+        display: flex;
+    }
+
+    .botao:first-child{ 
+        border-radius: 40px 40px 0 0
+    }
+
+    .botao:last-child{
+border-radius: 0 40px 0 0;
+
+    }
 }
     
 
