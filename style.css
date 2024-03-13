@@ -1,21 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family-Chakra+Petch:w ght@400:700&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family-Chakra+Petch:w ght@400:700&display=swap');
 
-:root{
---cor-de-fundo:#1E1E1E;
---verde:#6FFF57;
---branco:#FFFFFF;
---botao-ativo:#3A375E;
---botao-inativo:rgba(58, 55, 94, 0.5);
---texto-fundo:rgba(58, 55, 94, 0.3);
+:root {
+    --cor-de-fundo: #1E1E1E;
+    --verde: #6FFF57;
+    --branco: #FFFFFF;
+    --botao-ativo: #3A375E;
+    --botao-inativo: rgba(58, 55, 94, 0.5);
+    --texto-fundo: rgba(58, 55, 94, 0.3);
 }
 
-body{
-background-color: var(--cor-de-fundo);
-color: var(--branco);
-font-family: 'chakra petch', sans-serif;
+body {
+    background-color: var(--cor-de-fundo);
+    color: var(--branco);
+    font-family: 'chakra petch', sans-serif;
 }
 
-.conteudo-principal{
+.conteudo-principal {
 
     display: flex;
     flex-direction: column;
@@ -26,19 +26,19 @@ font-family: 'chakra petch', sans-serif;
     margin: 0 auto;
 }
 
-.titulo-principal{
-text-align: left;
-width: 100%;
-font-size: 32px;
+.titulo-principal {
+    text-align: left;
+    width: 100%;
+    font-size: 32px;
 }
 
-.titulo-principal span{
+.titulo-principal span {
 
-color: var(--verde);
+    color: var(--verde);
 
 }
 
-.botoes{
+.botao {
 
     font-family: 'chakra petch' sans-serif;
     background-color: var(--botao-inativo);
@@ -55,29 +55,34 @@ color: var(--verde);
     border-top: none;
 
 }
-.botao:first-child{
+
+.botao:first-child {
     border-radius: 40px 40px 0 0;
 }
 
-.botoes{
+.botoes {
     display: block;
+}
+
+.ativo {
+    background-color: var(--botao-ativo);
+    border-bottom: 4px solid var(--verde);
+
 }
 
 @media screen and (min-width: 768px) {
 
 
-    .botoes { 
+    .botoes {
         display: flex;
     }
 
-    .botao:first-child{ 
+    .botao:first-child {
         border-radius: 40px 0 0 0
     }
 
-    .botao:last-child{
-border-radius: 0 40px 0 0;
+    .botao:last-child {
+        border-radius: 0 40px 0 0;
 
     }
 }
-    
-
