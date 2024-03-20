@@ -38,7 +38,7 @@ color: var(--verde);
 
 }
 
-.botoes{
+.botao{
 
     font-family: 'chakra petch' sans-serif;
     background-color: var(--botao-inativo);
@@ -59,7 +59,7 @@ color: var(--verde);
     border-radius: 40px 40px 0 0;
 }
 
-.botoes{
+.botao{
     display: block;
 }
 
