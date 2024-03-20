@@ -63,7 +63,7 @@ color: var(--verde);
     display: block;
 }
 
-.ativo{
+.botao.ativo{
     background-color: var(--botao-ativo);
     border-bottom: 4px solid var(--verde);
 
@@ -75,8 +75,17 @@ background-color: var(--texto-fundo);
 padding: 40px;
 border-radius: 0 0 40px 40px;
 }
+.abas-conteudo.ativo{
 
+    display: block;
+}
 
+.abas.conteudo{
+
+    display: none;
+}.abas.conteudo-titulo-principal{
+    font-size: 28px;
+}
 
 @media screen and (min-width: 768px) {
 
