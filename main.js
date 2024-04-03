@@ -12,13 +12,20 @@ for (let i = 0; i < botoes.length; i++) {//loop que executa enquanto i<quantidad
         botoes[i].classList.add("ativo");//adiciona a palavra ativo da classe.
         textos[i].classList.add("ativo");//adiciona a palavra ativo da classe.
     }
-    console.log();
-
-    const contadores = document.querySelectorAll(".contador");
-
-    const tempoObejetivol = new Data("24-10-06T00:00:00");
-    let tempoAtual = new Date();
-    contadores[0].textContent = tempoObejetivol - tempoAtual;
-
-
 }
+
+const contadores = document.querySelectorAll(".contador");
+
+const tempoObejetivo1 = new Data("24-10-06T00:00:00");
+
+contadores[0].textContent = calculaTempo(tempoObejetivo1);
+
+function calculaTempo(tempoObejetivo) {
+
+    let tempoAtual = new Date();
+let tempofinal =tempoObejetivol-tempoAtual;
+let segndos=tempofinal/1000;
+return segundos;
+}
+
+
