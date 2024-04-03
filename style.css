@@ -93,16 +93,19 @@ body {
 
 .abas.conteudo-titulo-principal {
     font-size: 28px;
-    text-align:center;
+    text-align: center;
 }
 
 .abas.conteudo-titulo-secundarion {
-text-align: center;/*alinha o texto ao centro*/
-color: var(--verde);/*Cor do texto*/
-text-transform: uppercase;/*deixa o texto em maiúsculo*/
+    text-align: center;
+    /*alinha o texto ao centro*/
+    color: var(--verde);
+    /*Cor do texto*/
+    text-transform: uppercase;
+    /*deixa o texto em maiúsculo*/
 
 }
- 
+
 
 
 
