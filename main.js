@@ -15,7 +15,10 @@ for(let i = 0;i <botoes.length; i++){//loop que executa enquanto i<quantidade de
     console.log();
 
     const contadores = document.querySelectorAll(".contador");
-contadores[0].textContent= "contagem regresiva";
 
-    const tempoObejetivol = new Data();
+    const tempoObejetivol = new Data("24-10-06");
+
+    contadores[0].textContent= tempoObejetivol;
+
+   
 }
