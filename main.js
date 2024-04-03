@@ -1,5 +1,5 @@
 const botoes = document.querySelectorAll(".botao");//variável que armazena todos os itens com a classe botão
- const texto = document.querySelector(".aba-conteudo")//variável que armazena todos os itens com a classe aba conteudo
+ const textos = document.querySelector(".aba-conteudo")//variável que armazena todos os itens com a classe aba conteudo
 
 for(let i = 0;i <botoes.length; i++){//loop que executa enquanto i<quantidade de botoes
     botoes[i].onclick = function(){//cria uma função
