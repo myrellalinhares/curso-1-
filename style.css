@@ -86,17 +86,17 @@ body {
     display: block;
 }
 
-.abas.conteudo {
+.aba-conteudo {
 
     display: none;
 }
 
-.abas.conteudo-titulo-principal {
+.abas-conteudo-titulo-principal {
     font-size: 28px;
     text-align: center;
 }
 
-.abas.conteudo-titulo-secundarion {
+.aba-conteudo-titulo-secundarion {
     text-align: center;
     /*alinha o texto ao centro*/
     color: var(--verde);
