@@ -17,8 +17,16 @@ for (let i = 0; i < botoes.length; i++) {//loop que executa enquanto i<quantidad
 const contadores = document.querySelectorAll(".contador");
 
 const tempoObejetivo1 = new Data("2024-10-06T00:00:00");
+const tempoObejetivo2 = new Data("2024-10-06T00:00:00");
+const tempoObejetivo3 = new Data("2024-10-06T00:00:00");
+const tempoObejetivo4 = new Data("2024-10-06T00:00:00");
+
+
 
 contadores[0].textContent = calculaTempo(tempoObejetivo1);
+contadores[1].textContent = calculaTempo(tempoObejetivo2);
+contadores[2].textContent = calculaTempo(tempoObejetivo3);
+contadores[4].textContent = calculaTempo(tempoObejetivo4);
 
 function calculaTempo(tempoObejetivo) {
 
