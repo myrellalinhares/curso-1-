@@ -21,12 +21,13 @@ const tempoObejetivo2 = new Data("2024-10-06T00:00:00");
 const tempoObejetivo3 = new Data("2024-10-06T00:00:00");
 const tempoObejetivo4 = new Data("2024-10-06T00:00:00");
 
+const tempos[tempoObejetivo1,tempoObejetivo2,tempoObejetivo3,tempoObejetivo4]
 
+for (let i=0;i<contadores.length;i++)
+{
+    contadores[i].textContent = calculaTempo(tempos[i]);
+}
 
-contadores[0].textContent = calculaTempo(tempoObejetivo1);
-contadores[1].textContent = calculaTempo(tempoObejetivo2);
-contadores[2].textContent = calculaTempo(tempoObejetivo3);
-contadores[4].textContent = calculaTempo(tempoObejetivo4);
 
 function calculaTempo(tempoObejetivo) {
 
