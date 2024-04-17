@@ -2,7 +2,7 @@ const botoes = document.querySelectorAll(".botao");//variável que armazena todo
 const textos = document.querySelector(".aba-conteudo")//variável que armazena todos os itens com a classe aba conteudo
 
 for (let i = 0; i < botoes.length; i++) {//loop que executa enquanto i<quantidade de botoes
-    botoes[i].onclick = function ()  { //cria uma função
+    botoes[i].onclick = function () { //cria uma função
 
         for (let j = 0; j < botoes.length; j++) { //loop que executa j<quantidade de botoes
             botoes[j].classList.remove("ativo");//remove a palavra ativo da classe.
@@ -21,10 +21,21 @@ const tempoObejetivo2 = new Data("2024-10-06T00:00:00");
 const tempoObejetivo3 = new Data("2024-10-06T00:00:00");
 const tempoObejetivo4 = new Data("2024-10-06T00:00:00");
 
-const tempos[tempoObejetivo1,tempoObejetivo2,tempoObejetivo3,tempoObejetivo4]
+const tempos[tempoObejetivo1, tempoObejetivo2, tempoObejetivo3, tempoObejetivo4]
 
-for (let i=0;i<contadores.length;i++)
-{
+
+function atualizacronometro() {
+    for (let i = 0; i < contadores.length; i++) {
+
+        contadores[i]textContent = calculatempo(tempos[i]);
+    }
+
+}
+atualizacronometro();
+
+setInterval(atualizacronometro, 1000);
+
+for (let i = 0; i < contadores.length; i++) {
     contadores[i].textContent = calculaTempo(tempos[i]);
 }
 
@@ -37,10 +48,10 @@ function calculaTempo(tempoObejetivo) {
     let minutos = math.floor(segundos / 60);
     let horas = math.floor(minutos / 60);
     let dias = math.floor(horas / 24);
-    segundos%=60;
-    minutos%=60;
-    horas%=24;
-    return[ dias + "dias" + horas + "horas" + minutos + "minutos" + segundos + "segundos"];
+    segundos %= 60;
+    minutos %= 60;
+    horas %= 24;
+    return [dias + "dias" + horas + "horas" + minutos + "minutos" + segundos + "segundos"];
     //print(dias);
 
 }
