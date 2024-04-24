@@ -40,9 +40,10 @@ function calculaTempo(tempoObejetivo) {
     return [dias + "dias" + horas + "horas" + minutos + "minutos" + segundos + "segundos"];
     //print(dias);
 }
-else{return"Prazo Finalizado"}
+else{return[0,0,0,0]};
 }
 function atualizacronometro() {
+    calculaTempo(tempo[0]);
     for (let y = 0; y < contadores.length; i++) {
         contadores[y].textContent = calculatempo(tempos[i]);
     }
@@ -50,6 +51,5 @@ function atualizacronometro() {
 function comecacronometro(){
 atualizacronometro();
 setInterval(atualizacronometro, 1000);
-
-//}
-//comecacronometro();
+}
+comecacronometro();
