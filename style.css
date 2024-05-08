@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family-Chakra+Petch:w ght@400:700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&display=swap');
 
 :root {
     --cor-de-fundo: #1E1E1E;
@@ -12,11 +13,11 @@
 body {
     background-color: var(--cor-de-fundo);
     color: var(--branco);
-    font-family: 'chakra petch', sans-serif;
+    font-family: 'Chakra Petch', sans-serif;
 }
 
-.conteudo-principal {
 
+.conteudo-principal {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -33,14 +34,12 @@ body {
 }
 
 .titulo-principal span {
-
     color: var(--verde);
-
 }
 
-.botao {
 
-    font-family: 'chakra petch' sans-serif;
+.botao {
+    font-family: 'Chakra Petch', sans-serif;
     background-color: var(--botao-inativo);
     color: var(--branco);
     display: flex;
@@ -53,7 +52,6 @@ body {
     border-left: 2px solid var(--botao-ativo);
     border-right: 2px solid var(--botao-ativo);
     border-top: none;
-
 }
 
 .botao:first-child {
@@ -64,77 +62,59 @@ body {
     display: block;
 }
 
-.botao.ativo {
+.botao.ativo{
     background-color: var(--botao-ativo);
     border-bottom: 4px solid var(--verde);
-
-
 }
 
-.abas-textos {
+.abas-textos{
     background-color: var(--texto-fundo);
     padding: 40px;
-    /*espaçamento interno*/
     border-radius: 0 0 40px 40px;
-    /*cantos arrendodados*/
+}
+.aba-conteudo.ativo{
+    display:block;
 }
 
-/* comentario */
-
-.abas-conteudo.ativo {
-
-    display: block;
-}
-
-.aba-conteudo {
-
+.aba-conteudo{
     display: none;
 }
 
-.abas-conteudo-titulo-principal {
+.aba-conteudo-titulo-principal{
     font-size: 28px;
     text-align: center;
 }
-
-.aba-conteudo-titulo-secundarion {
+.aba-conteudo-titulo-secundario{
     text-align: center;
-    /*alinha o texto ao centro*/
     color: var(--verde);
-    /*Cor do texto*/
     text-transform: uppercase;
-    /*deixa o texto em maiúsculo*/
-
 }
+
 .contador{
-font-size: flex;
-justify-content: center; 
-flex-wrap: wrap;
-
-
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
-
 .contador-digito{
-
-    padding :0 16px;
+    padding: 0 16px;
     text-align: center;
-    min-height: 100px;
+    min-width: 100px;
 }
+
 .contador-digito-numero{
-    font-size: 80;
+    font-size: 80px;
     margin: 0;
 
 }
+
 .contador-digito-texto{
     color: var(--verde);
     font-size: 20px;
-    margin:0;
+    margin: 0;
+
 }
 
-
-
 @media screen and (min-width: 768px) {
-
-
     .botoes {
         display: flex;
     }
@@ -145,6 +125,5 @@ flex-wrap: wrap;
 
     .botao:last-child {
         border-radius: 0 40px 0 0;
-
     }
 }
