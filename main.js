@@ -1,55 +1,60 @@
-const botoes = document.querySelectorAll(".botao");//variável que armazena todos os itens com a classe botão
-const textos = document.querySelector(".aba-conteudo")//variável que armazena todos os itens com a classe aba conteudo
 
-for (let i = 0; i < botoes.length; i++) {//loop que executa enquanto i<quantidade de botoes
-    botoes[i].onclick = function () { //cria uma função
 
-        for (let j = 0; j < botoes.length; j++) { //loop que executa j<quantidade de botoes
-            botoes[j].classList.remove("ativo");//remove a palavra ativo da classe.
-            textos[j].classList.remove("ativo");//remove a palavra ativo da classe.
+const botoes = document.querySelectorAll(".botao");
+const textos = document.querySelectorAll(".aba-conteudo");
+
+for (let i = 0; i < botoes.length; i++) {
+    botoes[i].onclick = function () { // cria uma função
+
+        for (let j = 0; j < botoes.length; j++) { //loop que executa enquanto j<quantidade de bot
+            botoes[j].classList.remove("ativo"); //remove a palavra ativo da classe botoes
+            textos[j].classList.remove("ativo"); //remove a palavra ativo da classe textos
         }
 
-        botoes[i].classList.add("ativo");//adiciona a palavra ativo da classe.
-        textos[i].classList.add("ativo");//adiciona a palavra ativo da classe.
+        botoes[i].classList.add("ativo"); // adiciona a palavra ativo da classe botoes
+        textos[i].classList.add("ativo"); // adiciona a palavra ativo da classe textos
     }
 }
 
 const contadores = document.querySelectorAll(".contador");
+const tempoObjetivo1 = new Date("2024-12-05T00:00:00");
+const tempoObjetivo2 = new Date("2024-12-05T00:00:00");
+const tempoObjetivo3 = new Date("2024-12-05T00:00:00");
+const tempoObjetivo4 = new Date("2025-02-01T00:00:00");
 
-const tempoObejetivo1 = new Data("2024-10-06T00:00:00");
-const tempoObejetivo2 = new Data("2024-10-06T00:00:00");
-const tempoObejetivo3 = new Data("2024-10-06T00:00:00");
-const tempoObejetivo4 = new Data("2024-10-06T00:00:00");
-
-const tempo = [tempoObejetivo1, tempoObejetivo2, tempoObejetivo3, tempoObejetivo4]
-
+const tempos = [tempoObjetivo1,tempoObjetivo2,tempoObjetivo3,tempoObjetivo4];
 
 
-function calculaTempo(tempoObejetivo) {
-
+function calculaTempo(tempoObjetivo) {
     let tempoAtual = new Date();
-    let tempofinal = tempoObejetivol - tempoAtual;
-    let segndos = math.floor(tempofinal / 1000);
-    let minutos = math.floor(segundos / 60);
-    let horas = math.floor(minutos / 60);
-    let dias = math.floor(horas / 24);
+    let tempoFinal = tempoObjetivo - tempoAtual;
+    let segundos = Math.floor(tempoFinal / 1000);
+    let minutos = Math.floor(segundos / 60);
+    let horas = Math.floor(minutos / 60);
+    let dias = Math.floor(horas / 24);
+
     segundos %= 60;
     minutos %= 60;
     horas %= 24;
-    if(tempofinal>0){
-    return [dias + "dias" + horas + "horas" + minutos + "minutos" + segundos + "segundos"];
-    //print(dias);
-}
-else{return[0,0,0,0]};
-}
-function atualizacronometro() {
-    calculaTempo(tempo[0]);
-    for (let y = 0; y < contadores.length; i++) {
-        contadores[y].textContent = calculatempo(tempos[i]);
+    if (tempoFinal > 0){
+        return [dias,horas,minutos,segundos];
+    } else {
+        return [0,0,0,0];
     }
 }
-function comecacronometro(){
-atualizacronometro();
-setInterval(atualizacronometro, 1000);
+
+function atualizaCronometro(){
+    for (let i=0; i<contadores.length;i++){ //loop que executa enquanto i<quantidade de bot
+        document.getElementById("dias"+i).textContent = calculaTempo(tempos[i])[0];
+        document.getElementById("horas"+i).textContent = calculaTempo(tempos[i])[1];
+        document.getElementById("min"+i).textContent = calculaTempo(tempos[i])[2];
+        document.getElementById("seg"+i).textContent = calculaTempo(tempos[i])[3];   
+    }
 }
-comecacronometro();
+
+function comecaCronometro(){
+    atualizaCronometro();
+    setInterval(atualizaCronometro,1000);
+}
+
+comecaCronometro();
